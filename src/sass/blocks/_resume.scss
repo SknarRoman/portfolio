@@ -1,0 +1,113 @@
+.resume{
+    padding-top: 120px;
+    &__title{
+        position: relative;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        @include before_circle;
+        &:before{
+            // top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 60px;
+        text-align: center;
+    }
+    &__divider{
+        width: 80px;
+        height: 0px;
+        border: 2px solid $grey-color;
+        margin: 0 auto;
+        margin-top: 25px;
+        opacity: 0.8;
+    }
+    &__wrapper{
+        display: grid;
+        padding: 60px 65px 0 65px;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+    &__item{
+        position: relative;
+        &:before{
+            content: '';
+            height: 1px;
+            width: 45px;
+            position: absolute;
+            background-color: #000;
+            top: 67px;
+        }
+        &-text{
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &__location{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px
+        }
+        &-head{
+            position: relative;
+            padding: 45px 0 0 100px;
+        }
+        &-body{
+            padding-left: 43px;
+            margin-top: 12px;
+        }
+        &-icon{
+            position: absolute;
+            top: 50px;
+            left: 45px;
+            @include before_circle;
+            img{
+                position: absolute;
+                left: 17px;
+                top: 14px;
+            }
+
+        }
+    }
+    &__column{
+        &-title{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            position: relative;
+            padding-left: 35px;
+            &:before{
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background-color:$main-color;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul{
+            list-style-type: none;
+            li{
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content:'';
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    top: -9px;
+                    left: 0;
+                    background-color:#000;
+                    
+                }
+            }
+        }
+    }
+}
